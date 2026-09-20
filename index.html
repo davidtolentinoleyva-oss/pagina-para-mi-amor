@@ -1,19 +1,14 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Para mi amor ❤️</title>
-
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <!-- Corazones decorativos -->
     <div class="corazones">
         <span>❤️</span>
         <span>💕</span>
@@ -25,19 +20,25 @@
         <span>💓</span>
     </div>
 
-    <!-- Contenido principal -->
     <main class="contenedor">
 
         <section class="tarjeta">
 
-            <p class="pequeno">💌 Para la persona más especial 💌</p>
+            <p class="pequeno">
+                💌 Para la persona más especial 💌
+            </p>
 
-            <h1>HOLAAAAAA<br>MI AMORRRRRR ❤️</h1>
+            <h1>
+                HOLAAAAAA<br>
+                MI AMORRRRRR ❤️
+            </h1>
 
-            <h2>Te Amooooooo 🫶🏻💕</h2>
+            <h2>
+                Te Amooooooo 🫶🏻💕
+            </h2>
 
             <div class="foto">
-                <img src="foto.jpg" alt="tqq">
+                <img src="foto.jpg" alt="Nuestra foto">
             </div>
 
             <p class="mensaje">
@@ -46,8 +47,8 @@
             </p>
 
             <p class="mensaje">
-                Gracias por estar en mi vida, me haces muy feliz,
-           🥰
+                Gracias por estar en mi vida, tqmm
+             🥰
             </p>
 
             <button onclick="mostrarMensaje()">
@@ -61,10 +62,11 @@
     </main>
 
     <footer>
-        Hecho con  amor jeje❤️
+        Hecho con mucho amor ❤️
     </footer>
 
     <script>
+
         function mostrarMensaje() {
 
             const mensaje = document.getElementById("sorpresa");
@@ -84,9 +86,12 @@
                 const corazon = document.createElement("div");
 
                 corazon.innerHTML = "❤️";
+
                 corazon.classList.add("corazon-extra");
 
-                corazon.style.left = Math.random() * 100 + "vw";
+                corazon.style.left =
+                    Math.random() * 100 + "vw";
+
                 corazon.style.animationDuration =
                     (Math.random() * 3 + 2) + "s";
 
@@ -97,9 +102,8 @@
                 }, 5000);
             }
         }
+
     </script>
 
 </body>
-
 </html>
-```
