@@ -1,0 +1,407 @@
+```css
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ff758c,
+        #ff7eb3,
+        #c471ed,
+        #f64f59
+    );
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.contenedor {
+    min-height: 95vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.tarjeta {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    animation: aparecer 1.5s ease;
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+.pequeno {
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(35px, 7vw, 65px);
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        3px 3px 10px rgba(0, 0, 0, 0.3);
+
+    animation: latido 2s infinite;
+}
+
+h2 {
+    font-size: clamp(25px, 5vw, 40px);
+
+    margin-bottom: 30px;
+
+    color: #fff;
+
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.foto {
+    display: flex;
+    justify-content: center;
+
+    margin: 25px 0;
+}
+
+.foto img {
+    width: 300px;
+    max-width: 90%;
+
+    border-radius: 25px;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    transition: 0.4s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.06) rotate(2deg);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   MENSAJES
+========================= */
+
+.mensaje {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin: 18px auto;
+
+    max-width: 500px;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+button {
+    margin-top: 25px;
+
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: #e84373;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+
+    background: #ffe4ef;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   SORPRESA
+========================= */
+
+#sorpresa {
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    opacity: 0;
+
+    transform: scale(0.5);
+
+    transition: 0.6s ease;
+}
+
+#sorpresa.mostrar {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================
+   CORAZONES DEL FONDO
+========================= */
+
+.corazones span {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 30px;
+
+    opacity: 0.7;
+
+    animation: subir 8s linear infinite;
+
+    z-index: 1;
+}
+
+.corazones span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.corazones span:nth-child(2) {
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.corazones span:nth-child(3) {
+    left: 30%;
+    animation-delay: 4s;
+}
+
+.corazones span:nth-child(4) {
+    left: 45%;
+    animation-delay: 1s;
+}
+
+.corazones span:nth-child(5) {
+    left: 60%;
+    animation-delay: 3s;
+}
+
+.corazones span:nth-child(6) {
+    left: 72%;
+    animation-delay: 5s;
+}
+
+.corazones span:nth-child(7) {
+    left: 85%;
+    animation-delay: 2s;
+}
+
+.corazones span:nth-child(8) {
+    left: 95%;
+    animation-delay: 4s;
+}
+
+
+/* =========================
+   CORAZONES EXTRA
+========================= */
+
+.corazon-extra {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 30px;
+
+    animation: subirExtra 5s linear forwards;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes subirExtra {
+
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .tarjeta {
+        padding: 35px 20px;
+    }
+
+    .mensaje {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
+```

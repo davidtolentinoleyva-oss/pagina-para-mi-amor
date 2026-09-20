@@ -1,0 +1,105 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para mi amor ❤️</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Corazones decorativos -->
+    <div class="corazones">
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>💗</span>
+        <span>❤️</span>
+        <span>💘</span>
+        <span>💕</span>
+        <span>💓</span>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="contenedor">
+
+        <section class="tarjeta">
+
+            <p class="pequeno">💌 Para la persona más especial 💌</p>
+
+            <h1>HOLAAAAAA<br>MI AMORRRRRR ❤️</h1>
+
+            <h2>Te Amooooooo 🫶🏻💕</h2>
+
+            <div class="foto">
+                <img src="foto.jpg" alt="tqq">
+            </div>
+
+            <p class="mensaje">
+                Eres una persona increíble y quiero que sepas
+                lo mucho que significas para mí. ❤️
+            </p>
+
+            <p class="mensaje">
+                Gracias por estar en mi vida, me haces muy feliz,
+           🥰
+            </p>
+
+            <button onclick="mostrarMensaje()">
+                💖 Tengo algo para ti 💖
+            </button>
+
+            <p id="sorpresa"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Hecho con  amor jeje❤️
+    </footer>
+
+    <script>
+        function mostrarMensaje() {
+
+            const mensaje = document.getElementById("sorpresa");
+
+            mensaje.innerHTML =
+                "💗 Siempre voy a guardar un lugar especial para ti en mi corazón. 💗";
+
+            mensaje.classList.add("mostrar");
+
+            crearCorazones();
+        }
+
+        function crearCorazones() {
+
+            for (let i = 0; i < 15; i++) {
+
+                const corazon = document.createElement("div");
+
+                corazon.innerHTML = "❤️";
+                corazon.classList.add("corazon-extra");
+
+                corazon.style.left = Math.random() * 100 + "vw";
+                corazon.style.animationDuration =
+                    (Math.random() * 3 + 2) + "s";
+
+                document.body.appendChild(corazon);
+
+                setTimeout(() => {
+                    corazon.remove();
+                }, 5000);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+```
